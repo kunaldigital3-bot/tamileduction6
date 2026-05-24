@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day Trader</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3 Point Trader</title>
 
     <!-- Meta Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
         {
             if(f.fbq)return;
+
             n=f.fbq=function(){
                 n.callMethod ?
                 n.callMethod.apply(n,arguments) : n.queue.push(arguments)
@@ -32,14 +33,13 @@
         }(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
 
-        /* IMPORTANT:
-           Replace this with your REAL Meta Pixel ID
-        */
-        fbq('init', 'YOUR_PIXEL_ID');
+        /* Your Meta Pixel ID */
+        fbq('init', '27226551910307590');
 
+        /* Page View Event */
         fbq('track', 'PageView');
 
-        /* Telegram Button Tracking */
+        /* Telegram Click Tracking */
         function trackTelegramClick(event) {
 
             event.preventDefault();
@@ -48,30 +48,31 @@
                 content_name: 'Telegram Join Button'
             });
 
-            /* Delay redirect slightly so event can send */
+            /* Wait 300ms so event sends properly */
             setTimeout(function () {
                 window.location.href = "https://t.me/+f2r3GdvcCvkyNzY1";
             }, 300);
         }
     </script>
 
-    <!-- Meta Pixel Fallback -->
+    <!-- Meta Pixel Noscript -->
     <noscript>
         <img height="1"
              width="1"
              style="display:none"
-             src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+             src="https://www.facebook.com/tr?id=27226551910307590&ev=PageView&noscript=1"/>
     </noscript>
 
     <style>
 
         *{
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            margin: 0;
-            padding: 0;
+
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
             background: linear-gradient(
@@ -87,23 +88,24 @@
             justify-content: center;
             align-items: center;
 
+            padding: 20px;
+
             color: white;
             text-align: center;
-
-            padding: 20px;
         }
 
         .card {
-            background-color: #111827;
 
             width: 100%;
             max-width: 400px;
 
-            padding: 40px 20px;
+            background: #111827;
+
+            padding: 40px 25px;
 
             border-radius: 30px;
 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.5);
         }
 
         .logo-container {
@@ -113,17 +115,17 @@
 
             margin: 0 auto 20px;
 
-            border-radius: 50%;
+            background: white;
 
-            background: #fff;
+            border-radius: 50%;
 
             padding: 5px;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
             overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .logo-container img {
@@ -137,21 +139,22 @@
         }
 
         h1 {
-            font-size: 26px;
-            margin-bottom: 25px;
+
+            font-size: 28px;
             font-weight: 700;
+
+            margin-bottom: 25px;
         }
 
         .info-list {
 
             list-style: none;
 
-            padding: 0;
-            margin: 0 0 30px 0;
-
-            font-size: 16px;
+            margin-bottom: 30px;
 
             line-height: 2;
+
+            font-size: 16px;
         }
 
         .info-list li {
@@ -164,6 +167,12 @@
             align-items: center;
             justify-content: center;
 
+            gap: 10px;
+
+            width: 100%;
+
+            padding: 16px;
+
             background: linear-gradient(
                 90deg,
                 #7cf0e5,
@@ -174,25 +183,23 @@
 
             text-decoration: none;
 
-            padding: 15px;
+            border-radius: 50px;
 
-            border-radius: 40px;
-
-            font-weight: bold;
             font-size: 20px;
+            font-weight: bold;
+
+            transition: 0.2s ease;
 
             margin-bottom: 25px;
-
-            gap: 10px;
-
-            transition: transform 0.2s ease;
         }
 
         .btn:hover {
+
             transform: scale(1.03);
         }
 
         .btn img {
+
             width: 25px;
             height: 25px;
         }
@@ -200,14 +207,16 @@
         .footer-text {
 
             font-size: 13px;
+
             color: #9ca3af;
 
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .footer-text a {
 
             color: #49dcb1;
+
             text-decoration: none;
 
             font-weight: bold;
@@ -221,8 +230,7 @@
     <div class="card">
 
         <div class="logo-container">
-            <!-- Replace with your logo -->
-            <img src="logo.png" alt="Logo">
+            <img src="logo.png" alt="3 Point Trader Logo">
         </div>
 
         <h1>3 POINT TRADER</h1>
